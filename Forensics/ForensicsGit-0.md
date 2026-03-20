@@ -25,6 +25,7 @@ While traversing through the directories, we have found the `.git` folder and a 
 <img width="1096" height="186" alt="image" src="https://github.com/user-attachments/assets/d5919b3a-3b3c-4bc4-b444-b0abc6fafcef" />
 
 After reading the text file, it only tells us to wrap the leetspeak phrase between the flag format, so we will go to the `.git` folder to find that specific phrase.
+
 <img width="603" height="302" alt="image" src="https://github.com/user-attachments/assets/4ed1b51f-8939-434e-a163-1d1005746f54" />
 
 When dealing with Git, we should always check places where a flag might be hidden. One of the first places to inspect is `COMMIT_EDITMSG`, since it stores the most recent commit message and may still contain hidden or overlooked data such as a flag.
