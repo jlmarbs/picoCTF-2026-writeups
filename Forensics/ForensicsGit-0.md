@@ -18,15 +18,14 @@ Partition 3 did not let `fls` determine the file system type so going to Partiti
 We found the `home` directory! Moving on with the challenge since the title says about Forensics GIT, we are going to focus on finding the `.git` folder.
 
 Moving through each directory, we will still also use `fls -o 1140736 disk.img` and we will just specify the offset of the directory we want to go in after the file:
-<img width="614" height="467" alt="image" src="https://github.com/user-attachments/assets/75521077-aa47-428d-8494-2691a3c1f1c1" />
 
+<img width="614" height="467" alt="image" src="https://github.com/user-attachments/assets/75521077-aa47-428d-8494-2691a3c1f1c1" />
 
 While traversing through the directories, we have found the `.git` folder and a note.txt that might be a hint, so we will extract the note.txt with `icat`.
 <img width="1096" height="186" alt="image" src="https://github.com/user-attachments/assets/d5919b3a-3b3c-4bc4-b444-b0abc6fafcef" />
 
 After reading the text file, it only tells us to wrap the leetspeak phrase between the flag format, so we will go to the `.git` folder to find that specific phrase.
 <img width="603" height="302" alt="image" src="https://github.com/user-attachments/assets/4ed1b51f-8939-434e-a163-1d1005746f54" />
-
 
 When dealing with Git, we should always check places where a flag might be hidden. One of the first places to inspect is `COMMIT_EDITMSG`, since it stores the most recent commit message and may still contain hidden or overlooked data such as a flag.
 <img width="629" height="87" alt="image" src="https://github.com/user-attachments/assets/8f110770-4109-4ac4-b739-6f007068b2c2" />
