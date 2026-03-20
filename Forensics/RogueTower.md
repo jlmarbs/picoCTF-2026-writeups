@@ -1,4 +1,4 @@
-<img width="906" height="647" alt="image" src="https://github.com/user-attachments/assets/a6b49ba8-de29-4910-b103-7fd4a5dde195" />## DESCRIPTION
+## DESCRIPTION
 A suspicious cell tower has been detected in the network. Analyze the captured network traffic to identify the rogue tower, find the compromised device, and recover the exfiltrated flag.
 
 HINTS:
