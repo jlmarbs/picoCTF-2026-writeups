@@ -13,11 +13,11 @@ List of challenges I solved during picoCTF 2026 CTF!
 - ABSOLUTE NANO
 
 ## FORENSICS
-- Binary Digits
-- Forensics Git 0
-- Forensics Git 1
-- Forensics Git 2
-- Rogue Tower
+- [Binary Digits](./Forensics/BinaryDigits.md)
+- [Forensics Git 0](./Forensics/ForensicsGit-0.md)
+- [Forensics Git 1](./Forensics/ForensicsGit-1.md)
+- [Forensics Git 2](./Forensics/ForensicsGit-2.md)
+- [Rogue Tower](./Forensics/RogueTower.md)
 
 ## CRYPTOGRAPHY
 - Shared Secrets
