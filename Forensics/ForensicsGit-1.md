@@ -8,14 +8,17 @@ Same thing what we did in `Forensics Git 0`, we will go and find the `.git` fold
 Reading the `COMMIT_EDITMSG` does not reveal the flag anymore and that is when we are going to use the hint `How can you checkout the files of a previous commit?`
 
 Since we need to look at the PREVIOUS commit, we will now look into the `objects` folder. Why there? Previous commits aren't stored in a special history file. They are objects, sitting in objects/ just like blobs and trees. The "history" is just each commit object pointing to its parent via SHA1 hash.
+
 <img width="624" height="211" alt="image" src="https://github.com/user-attachments/assets/3d368e5d-9aac-4244-a7e4-04761084aaed" />
 
 As we can see, we have 5 different objects. Now taking note on the hint which said about PREVIOUS commit, we will pick an object for us to extract.
 
 But before picking any object to extract, we first need to identify the current commit hash. We do this by reading the master ref, which gives us the current commit hash:
+
 <img width="612" height="454" alt="image" src="https://github.com/user-attachments/assets/bc4442a8-3fcb-4a8d-90a9-58f93266c3d6" />
 
 This tells us that the 5f folder is the current (latest) commit. Decompressing it reveals a parent field, which points to the previous commit.
+
 <img width="732" height="290" alt="image" src="https://github.com/user-attachments/assets/a9f133be-fefc-40c7-afa1-5739662eb20b" />
 
 And since the commit message says removed flag, we will trace the parent hash which is`17` in the object folder.
@@ -25,6 +28,7 @@ As we can notice, this is the first commit. There is no parent field, meaning th
 <img width="696" height="286" alt="image" src="https://github.com/user-attachments/assets/990ff44f-d477-482d-98cd-c4d9afb65d5c" />
 
 The text file has been found but there is a garbled value after the flag.txt. We will now try to find out what that is in order to proceed.
+
 <img width="789" height="129" alt="image" src="https://github.com/user-attachments/assets/b82db3c1-f109-4eb2-867d-32c0ac2cf34f" />
 
 We can see the bytes f150f47a... which matches exactly the f1 object in our objects folder. Since tree objects only point to blobs for files, we now know f1 contains the contents of flag.txt.
